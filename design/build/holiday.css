@@ -144,6 +144,50 @@
   border-width: 0 40px 70px 40px;
   border-color: transparent transparent #28ae4b transparent;
 }
+#holiday .tree .gifts {
+  -webkit-animation: fade-gifts 3s ease;
+          animation: fade-gifts 3s ease;
+}
+#holiday .tree .gifts span:first-of-type {
+  position: absolute;
+  bottom: 0;
+  left: -15px;
+  width: 36px;
+  height: 20px;
+  background: #00BCD4;
+}
+#holiday .tree .gifts span:nth-child(2) {
+  position: absolute;
+  bottom: 20px;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  background: #E91E63;
+}
+#holiday .tree .gifts span:nth-child(3) {
+  position: absolute;
+  bottom: 5px;
+  right: 75px;
+  width: 18px;
+  height: 40px;
+  background: #FFC107;
+}
+#holiday .tree .gifts span:nth-child(4) {
+  position: absolute;
+  bottom: 5px;
+  right: -15px;
+  width: 24px;
+  height: 45px;
+  background: #FF5722;
+}
+#holiday .tree .gifts span:last-of-type {
+  position: absolute;
+  bottom: -4px;
+  left: 75px;
+  width: 32px;
+  height: 32px;
+  background: #9C27B0;
+}
 #holiday .snowman {
   position: absolute;
   left: 120px;
@@ -631,6 +675,28 @@
     opacity: 1;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
+  }
+}
+@-webkit-keyframes fade-gifts {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
+  }
+}
+@keyframes fade-gifts {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 1;
   }
 }
 #holiday-message {

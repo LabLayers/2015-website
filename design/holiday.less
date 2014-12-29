@@ -149,6 +149,49 @@
 				}
 			}
 		}
+		.gifts {
+			animation: fade-gifts 3s ease;
+			span:first-of-type {
+				position: absolute;
+				bottom: 0;
+				left: -15px;
+				width: 36px;
+				height: 20px;
+				background: #00BCD4;
+			}
+			span:nth-child(2) {
+				position: absolute;
+				bottom: 20px;
+				left: -10px;
+				width: 20px;
+				height: 20px;
+				background: #E91E63;
+			}
+			span:nth-child(3) {
+				position: absolute;
+				bottom: 5px;
+				right: 75px;
+				width: 18px;
+				height: 40px;
+				background: #FFC107;
+			}
+			span:nth-child(4) {
+				position: absolute;
+				bottom: 5px;
+				right: -15px;
+				width: 24px;
+				height: 45px;
+				background: #FF5722;
+			}
+			span:last-of-type {
+				position: absolute;
+				bottom: -4px;
+				left: 75px;
+				width: 32px;
+				height: 32px;
+				background: #9C27B0;
+			}
+		}
 	}
 	.snowman {
 		position: absolute;
@@ -417,6 +460,11 @@
 	0%  {opacity: 0; transform: translateY(-80px);}
 	35% {opacity: 0; transform: translateY(-80px);}
 	60% {opacity: 1; transform: translateY(0px);}
+}
+@keyframes fade-gifts {
+	0%  {opacity: 0;}
+	60% {opacity: 0;}
+	80% {opacity: 1; }
 }
 #holiday-message {
 	background: @land;
