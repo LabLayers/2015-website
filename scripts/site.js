@@ -4,7 +4,7 @@ var app = angular.module('victorIsAwesome', [
 ]);
 
 // Angular Routes
-app.config(['$routeProvider', function ($routeProvider) {
+app.  config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
 		// Home
 		.when("/", {templateUrl: "pages/home.html", controller: "pageController"})
@@ -18,6 +18,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 		.when("/project/item", {templateUrl: "pages/project.html", controller: "projectController"})
 		// else 404
 		.otherwise({templateUrl: "pages/404.html"});
+	$locationProvider.html5Mode(true);
 }]);
 
 // Angular Projects Controller
