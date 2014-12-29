@@ -1627,7 +1627,8 @@ footer#classic {
   position: relative;
   padding: 1.5em 0;
   overflow: hidden;
-  background: #e6e6e6;
+  background: #202020;
+  color: #e2e2e2;
 }
 footer#classic .icon-network {
   opacity: 0.15;
