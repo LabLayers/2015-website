@@ -236,11 +236,12 @@ var app = angular.module('victorIsAwesome', [
 app.  config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
 		// Home
-		.when("/", {templateUrl: "pages/home.html", controller: "pageController"})
+		.when("/home", {templateUrl: "pages/home.html", controller: "pageController"})
 		// Pages
 		.when("/about", {templateUrl: "pages/about.html", controller: "pageController"})
 		.when("/contact", {templateUrl: "pages/contact.html", controller: "pageController"})
 		// Event Pages
+		.when("/", {templateUrl: "pages/holiday.html", controller: "holidayController"})
 		.when("/holiday", {templateUrl: "pages/holiday.html", controller: "holidayController"})
 		// Blog
 		.when("/projects", {templateUrl: "pages/projects.html", controller: "projectController"})
