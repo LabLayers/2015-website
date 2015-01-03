@@ -53,6 +53,13 @@ module.exports = function(grunt) {
                 src: 'design/build/production.css',
                 dest: 'design/build/production.css'
             },
+            single_file: {
+                options: {
+                    // Target-specific options go here.
+                },
+                src: 'design/build/holiday.css',
+                dest: 'design/build/holiday.css'
+            }
         },
 
         express: {
