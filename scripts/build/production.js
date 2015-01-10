@@ -236,11 +236,11 @@ var app = angular.module('victorIsAwesome', [
 app.  config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
 		// Home
-		.when("/", {templateUrl: "pages/soon.html", controller: "holidayController"})
+		.when("/", {templateUrl: "pages/home.html", controller: "holidayController"})
 		.when("/home", {templateUrl: "pages/soon.html", controller: "pageController"})
 		// Pages
 		.when("/about", {templateUrl: "pages/about.html", controller: "pageController"})
-		.when("/contact", {templateUrl: "pages/contact.html", controller: "pageController"})
+		.when("/contact", {templateUrl: "pages/contact.html", controller: "contactController"})
 		// Event Pages
 		.when("/holiday", {templateUrl: "pages/holiday.html", controller: "holidayController"})
 		// Blog
@@ -261,6 +261,282 @@ app.controller('projectController', function () {
 app.controller('pageController', function () {
 	console.log("Page activated.");
 	// Page-specific scripts
+});
+
+// Contact Page Controller
+app.controller('contactController', function () {
+	console.log("Contact page activated. Alients?");
+	// Page-specific scripts
+	// TODO: Move all of this map code to a separate file
+	mapboxgl.accessToken = 'pk.eyJ1IjoidmljbG91IiwiYSI6InlGTGg2VWcifQ.JtZv4b1btXB1FqNK_yMUCQ';
+	// Create a map in the div #map
+	var map = new mapboxgl.Map({
+	  container: 'map', // container id
+	  style: '/design/mapbox/ordinary.json', //stylesheet location
+	  center: [39.9525,-75.1707], // starting position
+	  zoom: 13, // starting zoom
+	  hash: false, // update page url with location hash
+	  bearing: 9.3 // people will love me for this detail!
+	});
+	  
+	var geoJSON = {
+	"type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+	"features": [
+	  {
+	    "type": "Feature", // HQ
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-75.20464, 39.95306]
+	    },
+	    "properties": {
+	      "title": "Operations HQ",
+	      "marker-symbol": "warehouse"
+	    }
+	  }, {
+	    "type": "Feature", // Chill
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-75.14130, 39.94423]
+	    },
+	    "properties": {
+	      "title": "SSHP",
+	      "marker-symbol": "harbor"
+	    }
+	  }, {
+	    "type": "Feature", // Work
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-75.18788, 39.95512]
+	    },
+	    "properties": {
+	      "title": "Booksmart",
+	      "marker-symbol": "chemist"
+	    }
+	  }, {
+	    "type": "Feature", // Work
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-75.16263, 39.94935]
+	    },
+	    "properties": {
+	      "title": "Zivtech",
+	      "marker-symbol": "suitcase"
+	    }
+	  }, {
+	    "type": "Feature", // Wee
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-122.2963, 47.4450]
+	    },
+	    "properties": {
+	      "title": "Friend Lives Here",
+	      "marker-symbol": "bakery"
+	    }
+	  }, {
+	    "type": "Feature", // ILITE
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-77.62990, 38.84524]
+	    },
+	    "properties": {
+	      "title": "I Sold My Soul Here",
+	      "marker-symbol": "heart"
+	    }
+	  }, {
+	    "type": "Feature", // Elks
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-75.83390, 39.61574]
+	    },
+	    "properties": {
+	      "title": "Circle of Life",
+	      "marker-symbol": "embassy"
+	    }
+	  }, {
+	    "type": "Feature", // MARC
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-75.75263, 39.68519]
+	    },
+	    "properties": {
+	      "title": "Why hasn't MARC/SEPTA expanded service yet?",
+	      "marker-symbol": "cross"
+	    }
+	  }, {
+	    "type": "Feature", // Store
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-73.97301, 40.76384]
+	    },
+	    "properties": {
+	      "title": "A Store to Visit",
+	      "marker-symbol": "shop"
+	    }
+	  }, {
+	    "type": "Feature", // Vibes
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-73.99855, 40.72947]
+	    },
+	    "properties": {
+	      "title": "Chiptunes and Co.",
+	      "marker-symbol": "music"
+	    }
+	  }, {
+	    "type": "Feature", // Food
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-76.63367, 39.25784]
+	    },
+	    "properties": {
+	      "title": "Great Cookies",
+	      "marker-symbol": "bakery"
+	    }
+	  }, {
+	    "type": "Feature", // Pokey
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-76.61835, 39.28457]
+	    },
+	    "properties": {
+	      "title": "Fun! Fun! Fun!",
+	      "marker-symbol": "playground"
+	    }
+	  }, {
+	    "type": "Feature", // Yum
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-77.04331, 38.90967]
+	    },
+	    "properties": {
+	      "title": "Circle of Startups",
+	      "marker-symbol": "scooter"
+	    }
+	  }, {
+	    "type": "Feature", // Yum
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-77.22125, 38.91792]
+	    },
+	    "properties": {
+	      "title": "Best Mall",
+	      "marker-symbol": "land-use"
+	    }
+	  }, {
+	    "type": "Feature", // ?
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-77.73549, 38.96898]
+	    },
+	    "properties": {
+	      "title": "Worlds Collide Here",
+	      "marker-symbol": "museum"
+	    }
+	  }, {
+	    "type": "Feature", // Plaza
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-77.43136, 38.89876]
+	    },
+	    "properties": {
+	      "title": "International Love",
+	      "marker-symbol": "farm"
+	    }
+	  }, {
+	    "type": "Feature", // City that is not Atlantic
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-74.57098, 39.27468]
+	    },
+	    "properties": {
+	      "title": "Plunging Spot",
+	      "marker-symbol": "swimming"
+	    }
+	  }, {
+	    "type": "Feature", // City that is not Atlantic
+	    "geometry": {
+	      "type": "Point",
+	      "coordinates": [-75.14343, 39.94951]
+	    },
+	    "properties": {
+	      "title": "Ice Cream",
+	      "marker-symbol": "fast-food"
+	    }
+	  }
+	]};
+	var markers = new mapboxgl.GeoJSONSource({ data: geoJSON });
+	map.addSource('markers', markers);
+
+	var geoJSONMFL = {
+	  "type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+	  "features": [
+	    {
+	      "type": "Feature",
+	      "properties": {},
+	      "geometry": {
+	        "type": "LineString",
+	        "coordinates": [
+	          [-75.25935173034668, 39.96185925653245],
+	          [-75.2468204498291, 39.96271448002115],
+	          [-75.14382362365723, 39.949819206129945],
+	          [-75.13240814208984, 39.986590631428506],
+	          [-75.08962154388428, 40.009603815001704],
+	          [-75.07730484008789, 40.02373663935909]
+	        ]
+	      }
+	    }
+	  ]
+	};
+	var routemfl = new mapboxgl.GeoJSONSource({ data: geoJSONMFL });
+	map.addSource('routemfl', routemfl);
+
+	var geoJSONBSL = {
+	  "type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+	  "features": [
+	    {
+	      "type": "Feature",
+	      "properties": {},
+	      "geometry": {
+	        "type": "LineString",
+	        "coordinates": [
+	          [-75.14433860778809, 40.04121785026443],
+	          [-75.17377853393555, 39.90578590324711]
+	        ]
+	      }
+	    }
+	  ]
+	};
+	var routebsl = new mapboxgl.GeoJSONSource({ data: geoJSONBSL });
+	map.addSource('routebsl', routebsl);
+
+	var geoJSONTrolley = {
+	  "type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+	  "features": [
+	    {
+	      "type": "Feature",
+	      "properties": {},
+	      "geometry": {
+	        "type": "LineString",
+	        "coordinates": [
+	          [-75.24664878845215,39.94356807095909],
+	          [-75.2404260635376,39.945969890463914],
+	          [-75.23175716400146,39.94787812530285],
+	          [-75.22489070892334,39.94774652460901],
+	          [-75.20841121673584,39.949819206129945],
+	          [-75.19952774047852,39.95021399548981],
+	          [-75.18970012664795,39.95406307233881],
+	          [-75.1834774017334,39.95488549657055]
+	        ]
+	      }
+	    }
+	  ]
+	};
+	var routetrolley = new mapboxgl.GeoJSONSource({ data: geoJSONTrolley });
+	map.addSource('routetrolley', routetrolley);
+
+	// map.attributionControl.addAttribution('<a href="https://foursquare.com/">Places data from Foursquare</a>');
+	// Add zoom and rotation controls to the map.
+	map.addControl(new mapboxgl.Navigation());
 });
 
 // Angular Holiday Controller
