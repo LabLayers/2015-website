@@ -490,32 +490,38 @@ x-showcase {
 
 // Jobs
 #jobs {
-  // background: gray;
+  padding: 70px 0;
+  display: block;
+  background: gray;
   // color: white;
 }
 
 .job {
+  display: block;
+  padding: 1em;
+  box-shadow: 0 0 20px rgba(0,0,0,.5);
+  background: white;
+  p.lead {
+    font-size: 24px;
+  }
   p {
     //margin-bottom: 0.5em;
   }
   &#zivtech {
-    background: #4F074E;
-    color: white;
+    border-top: 5px solid #4F074E;
   }
   &#mlh {
-    background: #C21402;
-    color: white;
+    border-top: 5px solid #C21402;
   }
   &#booksmart {
-    background: #DB7800;
-    color: white;
+    border-top: 5px solid #DB7800;
   }
 }
 
 // Skills
 #skills {
   text-align: center;
-  padding-bottom: 0;
+  // padding-bottom: 0;
   background: @navy;
   color: white;
   .animated {
@@ -1093,13 +1099,6 @@ header#home {
 .animated {
   display: block;
   position: relative;
-}
-
-// Jobs
-#jobs {
-  padding: 0;
-  width: 100%;
-  display: block;
 }
 
 // EFNW
