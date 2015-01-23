@@ -348,7 +348,7 @@ table {
 body {
   margin: 0;
   padding: 0;
-  font-family: "Proxima Nova Condensed", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: white;
   font-weight: normal;
   color: black;
@@ -429,9 +429,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Proxima Nova Condensed", "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: .15em 0;
-  font-weight: 300;
+  font-weight: bold;
   line-height: 1em;
   color: inherit;
 }
@@ -1163,6 +1163,7 @@ header {
   color: #ffffff;
   text-align: center;
   padding: 150px 0;
+  max-height: 50vw;
 }
 header .video {
   z-index: 0;
@@ -1199,9 +1200,15 @@ header .clicky {
   font-size: 1.2em;
   background: #ffc50f;
   color: #000000;
+  box-shadow: 0 5px 0 #a87f00, 0 5px 2px #a87f00;
+  border-bottom: 1px solid #ffeaa8;
   width: 20%;
   display: inline-block;
   margin: auto;
+  /* &:hover, &:active {
+      background: @blue;
+      color: @white;
+    } */
 }
 header .clicky:hover,
 header .clicky:focus,
@@ -1209,11 +1216,6 @@ header .clicky:active,
 header .clicky.active {
   background: #000000;
   color: #ffc50f;
-}
-header .clicky:hover,
-header .clicky:active {
-  background: #57a8bd;
-  color: #ffffff;
 }
 header .clicky i {
   float: left;
@@ -2045,9 +2047,25 @@ header#home {
   text-align: center;
   min-height: 500px;
   height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 header#home h1 {
   font-size: 80px;
+}
+header#home p.lead {
+  margin-bottom: 0;
+}
+header#home:before {
+  position: absolute;
+  content: ' ';
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 100vw;
+  border-color: transparent transparent #223847 transparent;
 }
 header#home:after {
   position: absolute;
@@ -2063,10 +2081,12 @@ header#home:after {
 header#home .next {
   position: absolute;
   bottom: 40px;
-  right: 40px;
-  font-size: 80px;
+  left: 0;
+  width: 100%;
+  font-size: 120px;
   text-decoration: none;
   z-index: 512;
+  text-align: center;
 }
 #portfolio .item {
   position: relative;
@@ -2175,6 +2195,8 @@ header#home .next {
 #portfolio .button-more {
   background: #000000;
   color: #ffc50f;
+  box-shadow: 0 5px 0 #000000, 0 5px 2px #000000;
+  border-bottom: 1px solid #4d4d4d;
   color: white;
   float: right;
   -webkit-transition: all 180ms linear;
@@ -2235,6 +2257,8 @@ header#home .next {
   -webkit-user-select: none;
   background: #000000;
   color: #ffffff;
+  box-shadow: 0 5px 0 #000000, 0 5px 2px #000000;
+  border-bottom: 1px solid #4d4d4d;
 }
 .efnw#masthead .clicky:hover {
   color: white;
@@ -2295,6 +2319,8 @@ header#home .next {
   font-size: 1.2em;
   background: #ffc50f;
   color: #000000;
+  box-shadow: 0 5px 0 #a87f00, 0 5px 2px #a87f00;
+  border-bottom: 1px solid #ffeaa8;
   max-width: 300px;
   margin-right: 0;
   margin-bottom: -1.2em;
@@ -2338,6 +2364,8 @@ x-map .mapboxgl-ctrl-attrib:before {
 .hackerchat#masthead .clicky {
   background: #5a9570;
   color: #ffffff;
+  box-shadow: 0 5px 0 #345540, 0 5px 2px #345540;
+  border-bottom: 1px solid #b5d3c0;
 }
 .hackerchat#masthead .clicky:hover,
 .hackerchat#masthead .clicky:focus,
@@ -2360,6 +2388,8 @@ footer#bottom .clicky {
   font-size: 1.2em;
   background: #ffc50f;
   color: #000000;
+  box-shadow: 0 5px 0 #a87f00, 0 5px 2px #a87f00;
+  border-bottom: 1px solid #ffeaa8;
   max-width: 300px;
   margin-right: 0;
   margin-bottom: -1.2em;
@@ -2439,6 +2469,69 @@ footer#classic p {
   display: inline-block;
   position: relative;
   line-height: 2em;
+}
+a.navi {
+  padding: 10px 12px;
+  background-color: #9da4a4;
+  border-radius: 6px;
+  -webkit-transition: all 300ms ease;
+          transition: all 300ms ease;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  text-decoration: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  background: #000000;
+  margin-right: 0.5em;
+  display: block;
+  min-width: 200px;
+  margin: 0px auto;
+  font-size: 1.2em;
+  background: #1b5874;
+  color: #ffffff;
+  box-shadow: 0 5px 0 #081921, 0 5px 2px #081921;
+  border-bottom: 1px solid #51add7;
+  width: 20%;
+  max-width: 232px;
+  font-size: 24px;
+  display: inline-block;
+  margin: auto;
+}
+a.navi:hover {
+  color: white;
+  text-decoration: none;
+  background-color: #9da4a4;
+  -webkit-transition-delay: initial;
+          transition-delay: initial;
+}
+a.navi:hover,
+a.navi:focus,
+a.navi:active,
+a.navi.active {
+  background: #ffffff;
+  color: #000000;
+}
+a.navi:hover {
+  box-shadow: 0 1px 5px rgba(100, 100, 100, 0.5);
+  -webkit-transform: translateY(-1px);
+      -ms-transform: translateY(-1px);
+          transform: translateY(-1px);
+}
+a.navi:active {
+  box-shadow: 0 5px 10px rgba(50, 50, 50, 0.9);
+  -webkit-transform: translateY(-5px);
+      -ms-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+a.navi:hover,
+a.navi:focus,
+a.navi:active,
+a.navi.active {
+  background: #ffffff;
+  color: #1b5874;
 }
 .visible-mobile,
 .hidden-desktop {

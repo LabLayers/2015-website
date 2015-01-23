@@ -319,6 +319,17 @@ x-col[size="12"] { .make-column(12); }
   }
 }
 
+.button-lift(@text, @background) {
+  background: @background;
+  color: @text;
+  box-shadow: 0 5px 0 darken(@background, 20%),0 5px 2px darken(@background, 20%);
+  border-bottom: 1px solid lighten(@background, 30%);
+  &:hover, &:focus, &:active, &.active {
+    background: @text;
+    color: @background;
+  }
+}
+
 .clicky {
   .button;
   .button-fill(@white, @black);
