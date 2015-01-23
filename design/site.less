@@ -275,6 +275,7 @@ header {
   color: @white;
   text-align: center;
   padding: 150px 0;
+  max-height: 50vw;
   .video {
     z-index: 0;
     position: absolute;
@@ -310,10 +311,10 @@ header {
     width: 20%;
     display: inline-block;
     margin: auto;
-    &:hover, &:active {
+    /* &:hover, &:active {
       background: @blue;
       color: @white;
-    }
+    } */
     i {
       float: left;
       margin-top: 2px;
@@ -946,8 +947,24 @@ header#home {
   text-align: center;
   min-height: 500px;
   height: 100vh;
+  width: 100vw;
+  overflow: hidden;
   h1 {
     font-size: 80px;
+  }
+  p.lead {
+    margin-bottom: 0;
+  }
+  &:before {
+    position: absolute;
+    content: ' ';
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100vw;
+    border-color: transparent transparent @navy transparent;
   }
   &:after {
     position: absolute;
@@ -963,10 +980,12 @@ header#home {
   .next {
     position: absolute;
     bottom: 40px;
-    right: 40px;
-    font-size: 80px;
+    left: 0;
+    width: 100%;
+    font-size: 120px;
     text-decoration: none;
     z-index: 512;
+    text-align: center;
   }
 }
 
