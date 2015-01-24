@@ -4,11 +4,11 @@ var app = angular.module('victorIsAwesome', [
 ]);
 
 // Angular Routes
-app.  config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 	$routeProvider
 		// Home
 		.when("/", {templateUrl: "pages/home.html", controller: "holidayController"})
-		.when("/home", {templateUrl: "pages/soon.html", controller: "pageController"})
+		.when("/home", {templateUrl: "pages/soon.html", controller: "homeController"})
 		// Pages
 		.when("/about", {templateUrl: "pages/about.html", controller: "pageController"})
 		.when("/contact", {templateUrl: "pages/contact.html", controller: "contactController"})
@@ -21,6 +21,12 @@ app.  config(['$routeProvider', '$locationProvider', function($routeProvider, $l
 		.otherwise({templateUrl: "pages/404.html"});
 	$locationProvider.html5Mode(true);
 }]);
+
+// Angular Homepage Controller
+app.controller('homeController', function () {
+	console.log("Homepage activated.");
+	
+});
 
 // Angular Projects Controller
 app.controller('projectController', function () {
