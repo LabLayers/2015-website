@@ -68,11 +68,31 @@
 </head>
 <body ng-app="victorIsAwesome">
 
-	<div ng-include='"templates/header.html"'></div>
-	<div ng-view></div>
-	<div ng-include='"templates/footer.html"'></div>
+	<!-- Javascript notice -->
+	<noscript>
+		<a href="http://www.enable-javascript.com/" target="_blank">Please enable JavaScript to access this site. Click here for instructions.</a>
+	</noscript>
 
-	<!-- Also magic -->
+	<!-- Old IE notice -->
+	<!--[if lt IE 10]>
+		<div class="oldie">
+			<a href="http://browsehappy.com/" target="_blank">Please upgrade Internet Explorer to access this site. Click here for instructions.</a>
+		</div>
+	<![endif]-->
+
+	<div ng-include='"templates/header.html"'>
+		<!-- Route-aware header goes here -->
+	</div>
+	<div ng-view>
+		<!-- Page content goes here -->
+		<!-- Trying to view source code? -->
+		<!-- Check out https://github.com/LabLayers/new-airplane/tree/gh-pages/pages -->
+	</div>
+	<div ng-include='"templates/footer.html"'>
+		<!-- Static footer goes here -->
+	</div>
+
+	<!-- Javascript magic using jQuery -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="/scripts/build/production.js"></script>
 	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.2/mapbox-gl.css" rel="stylesheet"/>
