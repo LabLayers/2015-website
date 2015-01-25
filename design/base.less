@@ -405,6 +405,24 @@ x-col[size="12"] { .make-column(12); }
   font-size: 1.2em;
 }
 
+.clicky-expo {
+  .clicky;
+  .clicky-large;
+  .button-lift(black,@yellow);
+  width: 20%;
+  min-width: 235px;
+  display: inline-block;
+  margin: auto;
+  /* &:hover, &:active {
+    background: @blue;
+    color: @white;
+  } */
+  i {
+    float: left;
+    margin-top: 2px;
+  }
+}
+
 // Transitions
 .transition-faster {
   transition: all 100ms linear;
@@ -462,6 +480,7 @@ p {
 // Muted
 .muted {
   opacity: 0.65;
+}
 
 // Noscript and Old IE warnings
 noscript, .oldie {
