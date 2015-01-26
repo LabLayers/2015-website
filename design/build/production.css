@@ -2251,30 +2251,6 @@ x-card:hover {
 #home p.lead {
   margin-bottom: 0;
 }
-#home:before {
-  position: absolute;
-  content: ' ';
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 0 100px 100vw;
-  border-color: transparent transparent #223847 transparent;
-  z-index: 1;
-}
-#home:after {
-  position: absolute;
-  content: ' ';
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 0 100vw 100px 0;
-  border-color: transparent transparent #223847 transparent;
-  z-index: 1;
-}
 #home .next {
   position: absolute;
   bottom: 50px;
@@ -2497,7 +2473,7 @@ x-card:hover {
   position: relative;
 }
 .work {
-  padding: 150px 0;
+  padding: 150px 0 250px;
 }
 .work x-c {
   position: relative;
@@ -2511,15 +2487,41 @@ x-card:hover {
 .work .right {
   right: 0;
 }
-#booksmart {
-  background: #7D34BA;
-  color: white;
-  padding: 300px 0;
+.work:before {
+  position: absolute;
+  content: ' ';
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 0 100px 100vw;
+  border-color: transparent transparent #223847 transparent;
+  z-index: 1;
 }
-#booksmart p {
+.work:after {
+  position: absolute;
+  content: ' ';
+  bottom: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 100vw 100px 0;
+  border-color: transparent transparent #223847 transparent;
+  z-index: 1;
+}
+#booksmart,
+#ilite {
+  color: white;
+  padding: 250px 0 450px;
+}
+#booksmart p,
+#ilite p {
   max-width: 500px;
 }
-#booksmart .imac {
+#booksmart .imac,
+#ilite .imac {
   position: absolute;
   width: 47%;
   left: 50%;
@@ -2539,7 +2541,8 @@ x-card:hover {
           transition: all 180ms linear;
   translateZ: 0px;
 }
-#booksmart .imac .img {
+#booksmart .imac .img,
+#ilite .imac .img {
   display: block;
   height: 300px;
   width: 100%;
@@ -2551,7 +2554,8 @@ x-card:hover {
           transition: all 180ms linear;
   translateZ: 0px;
 }
-#booksmart .imac .img span {
+#booksmart .imac .img span,
+#ilite .imac .img span {
   position: absolute;
   top: 0;
   left: 0;
@@ -2569,7 +2573,8 @@ x-card:hover {
           transition: all 180ms linear;
   translateZ: 0px;
 }
-#booksmart .imac:before {
+#booksmart .imac:before,
+#ilite .imac:before {
   content: ' ';
   width: 0;
   height: 0;
@@ -2582,7 +2587,8 @@ x-card:hover {
   margin-left: -80px;
   clip: rect(120px, 160px, 200px, 0px);
 }
-#booksmart .imac:after {
+#booksmart .imac:after,
+#ilite .imac:after {
   content: ' ';
   width: 0;
   height: 0;
@@ -2595,12 +2601,13 @@ x-card:hover {
   margin-left: -120px;
   clip: rect(34px, 240px, 100px, 0px);
 }
-#booksmart .icons {
+#booksmart .icons,
+#ilite .icons {
   position: absolute;
   width: 47%;
   left: 50%;
   max-width: 620px;
-  bottom: 0;
+  top: 460px;
   text-align: center;
   -webkit-transform: scale(0.75);
       -ms-transform: scale(0.75);
@@ -2609,7 +2616,8 @@ x-card:hover {
           transition: all 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
   translateZ: 0px;
 }
-#booksmart .icons img {
+#booksmart .icons img,
+#ilite .icons img {
   position: relative;
   max-height: 130px;
   width: auto;
@@ -2618,70 +2626,90 @@ x-card:hover {
           transition: all 180ms linear;
   translateZ: 0px;
 }
-#booksmart .icons img:nth-child(1) {
-  -webkit-transform: rotate(60deg);
-      -ms-transform: rotate(60deg);
-          transform: rotate(60deg);
+#booksmart .icons img:nth-child(1),
+#ilite .icons img:nth-child(1) {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
-#booksmart .icons img:nth-child(2) {
-  -webkit-transform: rotate(90deg);
-      -ms-transform: rotate(90deg);
-          transform: rotate(90deg);
+#booksmart .icons img:nth-child(2),
+#ilite .icons img:nth-child(2) {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
-#booksmart .icons img:nth-child(3) {
-  -webkit-transform: rotate(120deg);
-      -ms-transform: rotate(120deg);
-          transform: rotate(120deg);
+#booksmart .icons img:nth-child(3),
+#ilite .icons img:nth-child(3) {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
-#booksmart .icons img:nth-child(4) {
-  -webkit-transform: rotate(150deg);
-      -ms-transform: rotate(150deg);
-          transform: rotate(150deg);
+#booksmart .icons img:nth-child(4),
+#ilite .icons img:nth-child(4) {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
 }
-#booksmart a:hover .imac {
+#booksmart a:hover .imac,
+#ilite a:hover .imac {
   -webkit-transform: perspective(600px) rotateX(5deg);
           transform: perspective(600px) rotateX(5deg);
 }
-#booksmart a:hover .imac .img {
+#booksmart a:hover .imac .img,
+#ilite a:hover .imac .img {
   background-position: top -30px center;
 }
-#booksmart a:hover .imac .img span {
+#booksmart a:hover .imac .img span,
+#ilite a:hover .imac .img span {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
   opacity: 1;
 }
-#booksmart.visible .icons {
+#booksmart.visible .icons,
+#ilite.visible .icons {
   -webkit-transform: scale(1);
       -ms-transform: scale(1);
           transform: scale(1);
 }
-#booksmart.visible .icons img {
+#booksmart.visible .icons img,
+#ilite.visible .icons img {
   opacity: 1;
   -webkit-animation: 1s bounce;
           animation: 1s bounce;
   -webkit-filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.45));
           filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.45));
 }
-#booksmart.visible .icons img:nth-child(1) {
+#booksmart.visible .icons img:nth-child(1),
+#ilite.visible .icons img:nth-child(1) {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
 }
-#booksmart.visible .icons img:nth-child(2) {
+#booksmart.visible .icons img:nth-child(2),
+#ilite.visible .icons img:nth-child(2) {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
 }
-#booksmart.visible .icons img:nth-child(3) {
+#booksmart.visible .icons img:nth-child(3),
+#ilite.visible .icons img:nth-child(3) {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
 }
-#booksmart.visible .icons img:nth-child(4) {
+#booksmart.visible .icons img:nth-child(4),
+#ilite.visible .icons img:nth-child(4) {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
           transform: rotate(0deg);
+}
+#booksmart {
+  background: #7D34BA;
+}
+#booksmart:before,
+#booksmart:after {
+  border-color: transparent transparent #7D34BA transparent;
 }
 @-webkit-keyframes bounce {
   0% {
@@ -2759,9 +2787,17 @@ x-card:hover {
   width: 100%;
   display: block;
 }
+#shower:before,
+#shower:after {
+  border-color: transparent transparent #40A3E0 transparent;
+}
 #ilite {
   background: #67AB33;
   color: white;
+}
+#ilite:before,
+#ilite:after {
+  border-color: transparent transparent #67AB33 transparent;
 }
 .efnw {
   background: -webkit-linear-gradient(top, #85e6e8, #ffffff);
@@ -2823,6 +2859,10 @@ x-card:hover {
 }
 .efnw .clicky:hover:before {
   background: #5a9570;
+}
+.efnw:before,
+.efnw:after {
+  border-color: transparent transparent #85e6e8 transparent;
 }
 #contact {
   display: block;

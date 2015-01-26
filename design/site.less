@@ -958,30 +958,6 @@ x-card {
   p.lead {
     margin-bottom: 0;
   }
-  &:before {
-    position: absolute;
-    content: ' ';
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 0 100px 100vw;
-    border-color: transparent transparent @navy transparent;
-    z-index: 1;
-  }
-  &:after {
-    position: absolute;
-    content: ' ';
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 0 100vw 100px 0;
-    border-color: transparent transparent @navy transparent;
-    z-index: 1;
-  }
   .next {
     position: absolute;
     bottom: 50px;
@@ -1152,7 +1128,7 @@ x-card {
 
 // Featured Work
 .work {
-  padding: 150px 0;
+  padding: 150px 0 250px;
   x-c {
     position: relative;
   }
@@ -1164,13 +1140,36 @@ x-card {
   .right {
     right: 0;
   }
+  &:before {
+    position: absolute;
+    content: ' ';
+    bottom: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 100px 100vw;
+    border-color: transparent transparent @navy transparent;
+    z-index: 1;
+  }
+  &:after {
+    position: absolute;
+    content: ' ';
+    bottom: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 100vw 100px 0;
+    border-color: transparent transparent @navy transparent;
+    z-index: 1;
+  }
 }
 
 // Booksmart
-#booksmart {
-  background: #7D34BA; // orange #FF7C38;
+#booksmart, #ilite {
   color: white;
-  padding: 300px 0;
+  padding: 250px 0 450px;
   p {
     max-width: 500px;
   }
@@ -1244,7 +1243,7 @@ x-card {
     width: 47%;
     left: 50%;
     max-width: 620px;
-    bottom: 0;
+    top: 460px;
     text-align: center;
     transform: scale(0.75);
     .transition-bounce;
@@ -1256,16 +1255,16 @@ x-card {
       opacity: 0;
       .transition;
       &:nth-child(1) {
-        transform: rotate(60deg);
+        transform: rotate(0deg);
       }
       &:nth-child(2) {
-        transform: rotate(90deg);
+        transform: rotate(0deg);
       }
       &:nth-child(3) {
-        transform: rotate(120deg);
+        transform: rotate(0deg);
       }
       &:nth-child(4) {
-        transform: rotate(150deg);
+        transform: rotate(0deg);
       }
     }
   }
@@ -1306,6 +1305,12 @@ x-card {
         }
       }
     }
+  }
+}
+#booksmart {
+  background: #7D34BA; // orange #FF7C38;
+  &:before, &:after {
+    border-color: transparent transparent #7D34BA transparent;
   }
 }
 @-webkit-keyframes bounce {
@@ -1386,24 +1391,33 @@ x-card {
     width: 100%;
     display: block;
   }
+  &:before, &:after {
+    border-color: transparent transparent #40A3E0 transparent;
+  }
 }
 
 #ilite {
   background: #67AB33;
   color: white;
+  &:before, &:after {
+    border-color: transparent transparent #67AB33 transparent;
+  }
 }
 
 // EFNW
 .efnw {
-    background: linear-gradient(to bottom, #85e6e8, #ffffff);
-    color: black;
-    .clicky {
-      // .button;
-      .button-lift(white, black);
-      &:hover:before {
-        background: @green;
-      }
+  background: linear-gradient(to bottom, #85e6e8, #ffffff);
+  color: black;
+  .clicky {
+    // .button;
+    .button-lift(white, black);
+    &:hover:before {
+      background: @green;
     }
+  }
+  &:before, &:after {
+    border-color: transparent transparent #85e6e8 transparent;
+  }
 }
 
 // Contact
