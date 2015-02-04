@@ -217,72 +217,157 @@
         </a>
       </x-col>
     </x-row>
-    <br>
-    <p class="muted">
-     <b>I've also done amazing things</b> for SEPTA, Mozilla, <a href="http://pennappsfellows.com/">PennApps Fellows</a>, Cade, <a href="http://ttdevelopers.github.io">Turntable.fm Developers</a>, HackBCA, Hack the Harbor, DCHacks, Precise Servers, Intuitive Servers, Intuitive Gaming, Eclipse Servers, Seneca Fiber, Connected Metropolis, <a href="http://poniverse.net">Poniverse</a>, Hatboro-Horsham Robotics, Fanbase, DeviantArt, Baltimore Robotics, Philadelphia Science Invitational, BRMS VEX Robotics, Haymarket Cupcakes, Eddie Samson, JaeLee, and more.
-    </p>
-    <a href="#/projects" class="button button-more"><i class="icon icon-right"></i> Show me even more!</a>
-    <p class="text-right">
-      
-    </p>
-  </x-c>
-</section>
-<section id="skills">
-  <x-c >
-    <h1>They call me a web unicorn.</h1>
-    <p class="">From coming up with ideas to the finishing touches, I can come up with a solution that meets your needs.</p>
-    <x-row>
+    <x-row grid-spacing="none">
       <x-col size="3">
-        <div class="animated animated-prototype">
-            <i class="icon-bolt"></i>
-            <div class="brainstorm">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-        </div>
-        <h3>Prototyping</h3>
-        <p>Every great masterpiece starts with a spark of genius</p>
-      </x-col>
-      <x-col size="3">
-        <div class="animated animated-design">
-          <i class="icon-brush"></i>
-          <div class="strokes left">
-            <span></span>
-            <span></span>
+        <a class="item" target="_blank" href="http://gestice.org">
+          <div class="img" style="background-image:url(/images/projects/gestice-app.png)"></div>
+          <div class="caption">
+            <small>Internet Of Things</small>
+            <h3>Gestice</h3>
+            <p>A new way to unlock your Android phone</p>
+            <span>Visit Site</span>
           </div>
-          <div class="strokes right">
-            <span></span>
-            <span></span>
+        </a>
+      </x-col>
+      <x-col size="3">
+        <a class="item" target="_blank" href="http://everfreenw.com">
+          <div class="img" style="background-image:url(/images/projects/everfreenw-thumb.png);background-position:top;"></div>
+          <div class="caption">
+            <small>Web Design/Development</small>
+            <h3>Everfree Northwest</h3>
+            <p>Seattle's largest My Little Pony convention</p>
+            <span>Visit Site</span>
           </div>
-          <div class="surface"></div>
-        </div>
-        <h3>Design</h3>
-        <p>From identity to typography I make it all.</p>
+        </a>
       </x-col>
       <x-col size="3">
-        <div class="animated animated-develop">
-          <i class="icon-fork"></i>
-          <div class="left">&lt;</div>
-          <div class="right">&gt;</div>
-        </div>
-        <h3>Development</h3>
-        <p>Pew pew pew! From web development to </p>
+        <a class="item" target="_blank" href="http://booksmart.it">
+          <div class="img" style="background-image:url(/images/projects/booksmart-app.png);background-position:top;"></div>
+          <div class="caption">
+            <small>Website</small>
+            <h3>Booksmart</h3>
+            <p>A smarter way to book concerts</p>
+            <span>Visit Site</span>
+          </div>
+        </a>
       </x-col>
       <x-col size="3">
-        <div class="animated animated-oss">
-          <i class="icon-heart"></i>
-          <i class="icon-octocat"></i>
-        </div>
-        <h3>Open Source</h3>
-        <p>I'm a big fan of open source and believe in transparency</p>
+        <a class="item" target="_blank" href="http://brainitch.com/ers">
+          <div class="img" style="background-image:url(/images/projects/brainitch-map.png)"></div>
+          <div class="caption">
+            <small>Website</small>
+            <h3>Brainitch</h3>
+            <p>Dynamic mobile experiences for the digital age</p>
+            <span>Visit Site</span>
+          </div>
+        </a>
       </x-col>
     </x-row>
+  </div>
+</section>
+<section id="skills" class="arrows">
+  <x-c>
+    <h1>They call me a web unicorn.</h1>
+    <!-- <h1>I bring web development to a whole new level.</h1> -->
+    <p class="lead">From brainstorming billiant ideas to the finishing touches, I can come up with a solution that meets your needs every step of the way. Click on a column to learn more about my process.</p>
+    <div id="tabstrip">
+      <x-row>
+        <a onclick="$('#tabstrip').removeClass().addClass('prototype');" class="prototype">
+          <x-col size="3">
+            <div class="animated animated-prototype">
+                <i class="icon-bolt"></i>
+                <div class="brainstorm">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+            </div>
+            <h3>Prototyping</h3>
+            <p>Every great masterpiece starts with a spark of genius.</p>
+          </x-col>
+        </a>
+        <a onclick="$('#tabstrip').removeClass().addClass('design');" class="design">
+          <x-col size="3">
+            <div class="animated animated-design">
+              <i class="icon-brush"></i>
+              <div class="strokes left">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="strokes right">
+                <span></span>
+                <span></span>
+              </div>
+              <div class="surface"></div>
+            </div>
+            <h3>Design</h3>
+            <p>From identity to style to typography I make it all.</p>
+          </x-col>
+        </a>
+        <a onclick="$('#tabstrip').removeClass().addClass('develop');" class="develop">
+          <x-col size="3">
+            <div class="animated animated-develop">
+              <i class="icon-fork"></i>
+              <div class="left">
+                <i class="icon-left"></i>
+              </div>
+              <div class="right">
+                <i class="icon-right"></i>
+              </div>
+            </div>
+            <h3>Development</h3>
+            <p>I can build anything from web &amp; mobile development to server hosting.</p>
+          </x-col>
+        </a>
+        <a onclick="$('#tabstrip').removeClass().addClass('oss');" class="oss">
+          <x-col size="3">
+            <div class="animated animated-oss">
+              <i class="icon-heart"></i>
+              <i class="icon-octocat"></i>
+            </div>
+            <h3>Open Source</h3>
+            <p>I specialize in free &amp; open source technologies.</p>
+          </x-col>
+        </a>
+      </x-row>
+      <div class="tab-content">
+        <x-row>
+          <x-col size="6">
+            <div class="alert">See Google Doc!</div>
+            <blockquote>
+              Every great idea starts with a spark
+            </blockquote>
+            <p class="lead">I make it all.</p>
+          </x-col>
+          <x-col size="6">
+            Photo
+          </x-col>
+        </x-row>
+      </div>
+      <br>
+      <br>
+      <div class="tab-nav">
+        <div class="left">
+          <a href="#" class="clicky clicky-expo">
+            <i class="icon-left"></i>
+            <strong>Previous</strong>
+            Design
+          </a>
+        </div>
+        <div class="right">
+          <a href="#" class="clicky clicky-expo">
+            <strong>Next</strong>
+            Development
+            <i class="icon-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
     <!-- <x-row class="triangles">
       <x-col size="3">
         <div class="triangle">
