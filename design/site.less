@@ -783,6 +783,78 @@ x-showcase {
       }
     }
   }
+  .tab-content {
+    background: white;
+    color: black;
+    margin: 0 -15px;
+    padding: 1em 20px;
+    text-align: left;
+  }
+  #tabstrip {
+    &.prototype {
+      .prototype {
+        &> x-col {
+          background: white;
+          color: black;
+          &:hover {
+            box-shadow: none;
+          }
+        }
+        .animated {
+          // transform: scale(1.35);
+          transform-origin: center center;
+        }
+        .animated.animated-prototype .brainstorm span {
+          background: gray;
+        }
+      }
+    }
+    &.design {
+      .design {
+        &> x-col {
+          background: white;
+          color: black;
+          &:hover {
+            box-shadow: none;
+          }
+        }
+        .animated {
+          // transform: scale(1.35);
+          transform-origin: center center;
+        }
+      }
+    }
+    &.develop {
+      .develop {
+        &> x-col {
+          background: white;
+          color: black;
+          &:hover {
+            box-shadow: none;
+          }
+        }
+        .animated {
+          // transform: scale(1.35);
+          transform-origin: center center;
+        }
+      }
+    }
+    &.oss {
+      .oss {
+        &> x-col {
+          background: white;
+          color: black;
+          &:hover {
+            box-shadow: none;
+          }
+        }
+        .animated {
+          // transform: scale(1.35);
+          transform-origin: center center;
+        }
+      }
+    }
+  }
 }
 @keyframes flare {
   0%   {opacity: 1; transform: scale(1.25);}
@@ -960,6 +1032,8 @@ x-card {
 // About
 #about {
   background: @purple;
+  color: @white;
+
 }
 
 // Prizes
@@ -981,10 +1055,11 @@ x-card {
 #home {
   background-color: #883DC3;
   // background-color: @blue;
-  background-image: linear-gradient(-90deg, #5f2c82, #49a09d);
+  // background-image: linear-gradient(-90deg, #5f2c82, #49a09d);
+  background-image: radial-gradient(#4F94E0, #1666BD);
   color: white;
   text-align: left;
-  min-height: 500px;
+  min-height: 850px;
   // height: 100vh;
   height: 90vh;
   padding: 200px 0 400px;
@@ -1051,14 +1126,64 @@ x-card {
 
 // Portfolio
 #portfolio {
+  h1 {
+    font-size: 60px;
+  }
+  &.spoiler {
+    display: block;
+    padding: 0 0;
+    // max-height: 900px;
+    text-align: center;
+    .showcase {
+      height: (@showcase-item-height*3px);;
+      .transition;
+      transition-delay: 2s;
+      transition-duration: 0s;
+    }
+  }
+  .showcase {
+    // max-height: 300px;
+    // max-height: 600px;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    margin-bottom: 45px;
+    .overlay-unit {
+      position: absolute;
+      top: (@showcase-item-height*2px);
+      left: 0;
+      width: 100%;
+      height: @showcase-item-height;
+      text-align: center;
+      padding: (@showcase-item-height/10px);
+      z-index: 20;
+      columns: white;
+      background: linear-gradient(transparent 0%, rgba(0,0,0,.6) 30%, black 90%);
+      .transition;
+      tramsition-timing-function: ease;
+      transition-duration: 180ms;
+      p.lead {
+        margin-bottom: 5px;
+      }
+    }
+    &:after {
+      /* position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 600px;
+      content: ' ';
+      z-index: 10; */
+    }
+  }
   .item {
     position: relative;
     display: block;
     overflow: hidden;
-    height: 200px;
+    height: @showcase-item-height;
     .img {
       display: block;
-      height: 200px;
+      height: @showcase-item-height;
       width: 100%;
       background-size: cover;
       background-position: center;
@@ -1131,9 +1256,9 @@ x-card {
       }
     }
     &.item-large {
-      height: (200px*2px);
+      height: (@showcase-item-height*2px);
       .img {
-        height: (200px*2px);
+        height: (@showcase-item-height*2px);
       }
       .caption {
         padding: 5em 1em;
@@ -1143,7 +1268,7 @@ x-card {
       }
     }
     &.item-bump-up {
-      margin-top: -200px;
+      margin-top: -@showcase-item-height;
     }
   }
   .button-more {
@@ -1156,51 +1281,52 @@ x-card {
       }
     }
   }
+  &.open {
+    &.spoiler {
+      .showcase {
+        height: auto;
+        // margin-bottom: 75px;
+      }
+    }
+    .overlay-unit {
+      opacity: 0;
+      background: none;
+      pointer-events: none;
+      transform: scale(1.2);
+    }
+  }
 }
 
 // Animated
 .animated {
   display: block;
   position: relative;
+  .transition;
 }
 
-// Featured Work
-.work {
-  padding: 150px 0 250px;
-  x-c {
-    position: relative;
-  }
-  .left, .right {
-    width: 45%;
-    max-height: 500px;
-    overflow: hidden;
-  }
-  .right {
-    right: 0;
+// Arrows
+.arrows {
+  &:before, &:after {
+    position: absolute;
+    content: ' ';
+    bottom: 100%;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    z-index: 100;
+    .transition;
   }
   &:before {
-    position: absolute;
-    content: ' ';
-    bottom: 100%;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
     border-width: 0 0 100px 100vw;
     border-color: transparent transparent @navy transparent;
-    z-index: 1;
   }
   &:after {
-    position: absolute;
-    content: ' ';
-    bottom: 100%;
-    left: 0;
-    width: 0;
-    height: 0;
-    border-style: solid;
     border-width: 0 100vw 100px 0;
     border-color: transparent transparent @navy transparent;
-    z-index: 1;
+  }
+}
+
 // Featured Work
 .work {
   .arrows;
@@ -1462,9 +1588,9 @@ x-card {
   color: black;
   .clicky {
     // .button;
-    .button-lift(white, black);
+    // .button-lift(white, black);
     &:hover:before {
-      background: @green;
+      // background: @green;
     }
   }
   &:before, &:after {
@@ -1544,24 +1670,27 @@ x-map {
 
 // Hackerchat
 .hackerchat {
-&#masthead {
-  background-color: #1F1F1F;
-  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/dark_matter.png);
-  .clicky {
-    .button-lift(white, @green);
-    &:hover {
-      color: @green;
+  &#masthead {
+    background-color: #1F1F1F;
+    background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/dark_matter.png);
+    .clicky {
+      .button-lift(white, @green);
+      &:hover {
+        color: @green;
+      }
     }
   }
-}
-&.pitch {
-  background: #1F1F1F;
-  color: white;
-}
+  &.pitch {
+    background: #1F1F1F;
+    color: white;
+  }
 }
 
 // Footer
 footer#bottom {
+  background: rgb(42, 42, 42);
+  color: white;
+  padding: 60px;
   .clicky {
   // .clicky-small;
     .clicky-large;
