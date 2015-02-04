@@ -103,11 +103,19 @@
     </div>
   </x-c>
 </section>
-<section id="portfolio">
+<section class="spoiler" id="portfolio">
   <x-c>
-    <h1 class="text-center">That's just the tip of the iceberg.</h1>
-    <p>Here are some more projects I've worked on:</p>
+    <h1>...and that's just the tip of the iceberg.</h1>
+    <p class="lead">Here are some more amazing products I've worked on:</p>
     <br>
+  </x-c>
+  <div class="showcase">
+    <div class="overlay-unit">
+      <x-c>
+        <p class="lead">I have even more to show you!</p>
+        <a onclick="$('#portfolio').toggleClass('open');$('#skills').toggleClass('flap-down')" class="clicky clicky-expo">Explore my entire portfolio</a>
+      </x-c>
+    </div>
     <x-row grid-spacing="none">
       <x-col size="6">
         <a class="item item-large" target="_blank" href="https://www.youtube.com/watch?v=VQvbk3YjaEw">

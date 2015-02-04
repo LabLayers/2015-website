@@ -1598,6 +1598,42 @@ x-showcase {
   text-align: center;
   background: #223847;
   color: white;
+  padding-top: 30px;
+  -webkit-transition: all 180ms linear;
+          transition: all 180ms linear;
+  translateZ: 0px;
+}
+#skills:before,
+#skills:after {
+  border-color: transparent transparent #223847 transparent;
+}
+#skills.flap-down {
+  margin-top: 75px;
+  padding-top: 60px;
+}
+#skills.flap-down:before {
+  border-width: 0 0 0px 100vw;
+}
+#skills.flap-down:after {
+  border-width: 0 100vw 0px 0;
+}
+#skills x-row > a > x-col {
+  padding: 2em 1em;
+  -webkit-transition: all 180ms linear;
+          transition: all 180ms linear;
+  translateZ: 0px;
+}
+#skills x-row > a > x-col:hover {
+  background: #4c82a6;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+#skills x-row > a > x-col p {
+  min-height: 4.5em;
+  margin-bottom: 0;
+}
+#skills h1 {
+  font-size: 64px;
+  line-height: 1.5em;
 }
 #skills .animated {
   position: relative;

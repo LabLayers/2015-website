@@ -196,12 +196,16 @@ nav#neue {
   left: 0;
   width: 100%;
   z-index: 9001;
+  .transition;
   &.docked {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,.75);
-    padding: 4px 30px;
+    background: rgba(0,0,0,.9);
+    padding: 4px 50px;
+    .active span {
+      background: rgba(255,255,255,.35);
+    }
   }
   menu {
     display: inline-block;
@@ -524,6 +528,37 @@ x-showcase {
   // padding-bottom: 0;
   background: @navy;
   color: white;
+  padding-top: 30px;
+  .transition;
+  &:before, &:after {
+    border-color: transparent transparent @navy transparent;
+  }
+  &.flap-down {
+    margin-top: 75px;
+    padding-top: 60px;
+    &:before {
+      border-width: 0 0 0px 100vw;
+    }
+    &:after {
+      border-width: 0 100vw 0px 0;
+    }
+  }
+  x-row > a > x-col {
+    padding: 2em 1em;
+    .transition;
+    &:hover {
+      background: rgb(76, 130, 166);
+      box-shadow: 0 10px 20px rgba(0,0,0,.5);
+    }
+    p {
+      min-height: 4.5em;
+      margin-bottom: 0;
+    }
+  }
+  h1 {
+    font-size: 64px;
+    line-height: 1.5em;
+  }
   .animated {
     position: relative;
     display: block;
@@ -667,7 +702,7 @@ x-showcase {
         margin-top: 20px;
         font-size: 60px;
         transform: rotate(0);
-        animation: hammer 1s ease infinite;
+        // animation: hammer 1s ease infinite;
       }
       .code {
         display: block;
@@ -689,6 +724,9 @@ x-showcase {
           margin-top: -1em;
           transform: rotate(10deg);
         }
+      }
+      .left, .right {
+        font-size: 100px;
       }
     }
     &.animated-oss {
