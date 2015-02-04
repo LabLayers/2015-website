@@ -510,4 +510,10 @@ function handleScroll() {
 			// el.removeClass("visible"); 
 		}
 	});
+	if( ($(window).scrollTop()) > 24 ) {
+		$("nav").addClass("docked");
+	}
+	else {
+		$("nav").removeClass("docked");
+	}
 };
