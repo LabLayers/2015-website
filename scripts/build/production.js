@@ -745,9 +745,9 @@ function handleScroll() {
 		}
 	});
 	if( ($(window).scrollTop()) > 24 ) {
-		$("nav").addClass("docked");
+		// $("nav").addClass("docked");
 	}
 	else {
-		$("nav").removeClass("docked");
+		// $("nav").removeClass("docked");
 	}
 };
