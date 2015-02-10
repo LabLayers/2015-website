@@ -64,6 +64,9 @@
 	&:before, &:after {
 		border-color: transparent transparent white transparent;
 	}
+	h1 {
+		font-size: 64px;
+	}
 	.item {
 		display: flex;
 		position: relative;
@@ -122,10 +125,10 @@
 			}
 		}
 		&:active {
+			outline: 2px solid black;
 			// box-shadow: 8px 8px 0 darken(@yellow, 50%);
 		}
 		&:focus {
-			outline: 2px solid black;
 		}
 	}
 }
@@ -142,11 +145,11 @@
 		.transition;
 	}
 	&:before {
-		border-width: 0 0 100px 100vw;
+		border-width: 0 0 70px 100vw;
 		border-color: transparent transparent @navy transparent;
 	}
 	&:after {
-		border-width: 0 100vw 100px 0;
+		border-width: 0 100vw 70px 0;
 		border-color: transparent transparent @navy transparent;
 	}
 }
@@ -275,8 +278,58 @@
 	color: white;
 	text-align: center;
 }
+// Contact
+.contact {
+	x-map {
+		margin-bottom: 0;
+	}
+	a.twitter {
+		background: white;
+		color: @twitter;
+		display: inline-block;
+		padding: 0 10px;
+		vertical-align: middle;
+		line-height: 1.75em;
+	}
+}
 // Footer
 #yay {
-	background: @black;
+	background: #1A1A1A; // @black;
 	color: white;
+	.left {
+		i {
+			color: black;
+			font-size: 3.5em;
+			opacity: 0.5;
+			line-height: 1.5em;
+			margin-right: 30px;
+			border-right: 1px solid;
+			padding-right: 30px;
+		}
+	}
+	h2 {
+		margin-bottom: 0;
+	}
+	.social {
+		margin-left: 4px;
+		a {
+			opacity: 0.5;
+			border-bottom: none;
+			display: inline-block;
+			padding: 0 4px;
+			font-size: 0.8em;
+			&:hover {
+				opacity: 1;
+				&.twitter {
+					color: @twitter;
+				}
+				&.github {
+					color: white;
+				}
+				&.dribbble {
+					color: @dribbble;
+				}
+			}
+		}
+	}
 }

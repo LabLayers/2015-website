@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Hi, my name is... -->
+	<title>Victor Lourng, Philadelphia Web Developer</title>
+	<!-- Encoding -->
+	<meta charset="utf-8">
+	<!-- Routing -->
+	<base href="/">
+	<!-- For all the mobile users -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale = 1.0,maximum-scale=2.0,user-scalable=yes">
+	<!-- About this webpage  -->
+	<meta itemprop="name" content="Victor Lourng">
+	<meta itemprop="description" content="A high school student passionate about making things awesome. When he's not playing with his mouse, his inspiring and leading the way for innovation and great ideas.">
+	<meta name="description" content="A high school student passionate about making things awesome. When he's not playing with his mouse, his inspiring and leading the way for innovation and great ideas.">
+	<meta itemprop="image" content="http://i.imgur.com/6oKYvVS.png">
+	<!-- Triggering keywords for search engines -->
+	<meta name="keywords" content="Victor Lourng, Creative, Student, Enginner, Philadelphia, Pennsylvania, Web Development, CSS, Javascript, HS Hackers">
+	<!-- Facebook open graph metadaa -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Happy Holidays from Victor Lourng">
+	<meta property="og:site_name" content="Victor Lourng">
+	<meta property="og:description" content="Ho ho ho! Check out my awesome holiday card and be sure to jam F5 for an easter egg!">
+	<meta property="og:url" content="http://victor.moe/holiday">
+	<meta property="og:image" content="http://i.imgur.com/6oKYvVS.png">
+	<meta property="og:type" content="profile">
+	<!-- Facebook open graph profile -->
+	<meta property="profile:first_name" content="Victor">
+	<meta property="profile:last_name" content="Lourng">
+	<meta property="profile:gender" content="male">
+	<!-- Facebook comment moderation -->
+	<meta property="fb:admins" content="100001604500510">
+	<!-- Twitter cards -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@lablayers">
+	<meta name="twitter:title" content="The Website of Victor Lourng">
+	<meta name="twitter:description" content="A high school student passionate about making things awesome. When he's not playing with his mouse, his inspiring and leading the way for innovation and great ideas.">
+	<meta name="twitter:creator" content="@lablayers">
+	<meta name="twitter:image:src" content="http://i.imgur.com/6oKYvVS.png">
+	<meta name="twitter:domain" content="victorlourng.com">
+	<!-- Google+ author tag -->
+	<meta name="googleplus" href="https://plus.google.com/+VictorLourng?rel=author">
+	<!-- Allows crawlers to index this page -->
+	<meta name="robots" content="allow">
+	<!-- Forces javascript mode on certain crawlers -->
+	<meta name="robots-js" content="allow">
+	<!-- Direct web developers to meta file -->
+	<meta name="humans" content="humans.txt">
+	<!-- Tab bar icon -->
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- Apple app icon -->
+	<link rel="apple-touch-icon" content="apple-touch-icon.png">
+	<!-- Microsoft app icon -->
+	<meta name="msapplication-navbutton-color" content="#672F89">
+	<meta name="msapplication-tooltip" content="Victor Lourng">
+	<meta name="msapplication-TileColor" content="#672F89">
+	<meta name="msapplication-TileImage" content="apple-touch-icon.png">
+	<!-- Declare web app capability -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<!-- This is where the real magic happens. -->
+	<link rel="stylesheet" href="/design/build/production.css">
+	<!-- Custom built icon font -->
+	<link rel="stylesheet" href="/icons/style.css">
+	<!-- Google fonts -->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Muli">
+	<!-- Redirect non-javscript users -->
+	<noscript></noscript>
+</head>
+<body ng-app="victorIsAwesome">
+
+	<!-- Javascript notice -->
+	<noscript>
+		<a href="http://www.enable-javascript.com/" target="_blank">Please enable JavaScript to access this site. Click here for instructions.</a>
+	</noscript>
+
+	<!-- Old IE notice -->
+	<!--[if lt IE 10]>
+		<div class="oldie">
+			<a href="http://browsehappy.com/" target="_blank">Please upgrade Internet Explorer to access this site. Click here for instructions.</a>
+		</div>
+	<![endif]-->
+
+	<!--
+	<div ng-include='"templates/header.html"'>
+	-->
+		<!-- Route-aware header goes here -->
+	<!--
+	</div>
+	-->
+	<!--
+	<div ng-view>
+		<!-- Page content goes here -->
+		<!-- Trying to view source code? -->
+		<!-- Check out https://github.com/LabLayers/new-airplane/tree/gh-pages/pages -->
+	<!--
+	</div>
+	-->
+	<!--
+	<div ng-include='"templates/footer.html"'>
+		<!-- Static footer goes here -->
+	<!--
+	</div>
+	-->
+	
+	<span id="top"></span>
+
+	<nav id="neue" class="">
+		<menu class="right">
+		  <li>
+		  <a href="#/contact">
+			Let's connect:
+		  </a>
+		  </li>
+		  <li class="twitter">
+			<a href="http://twitter.com/lablayers" target="_blank">
+			  <i class="icon-twitter"></i>
+			</a>
+		  </li><li class="github">
+			<a href="http://github.com/lablayers" target="_blank">
+			  <i class="icon-github"></i>
+			</a>
+		  </li><li class="dribbble">
+			<a href="http://dribbble.com/lablayers" target="_blank">
+			  <i class="icon-dribbble"></i>
+			</a>
+		  </li>
+		</menu>
+		<menu class="navigation">
+		  <li class="brand">
+			<a href="#/">
+			  <i class="icon-face-unlock"></i> <x-man>Victor Lourng <sup>ALPHA</sup></x-man>
+			</a>
+		  </li><li class="tilde">
+			/
+		  </li><li class="active">
+			<a href="#top">
+			  <span>Howdy</span>
+			</a>
+		  </li><li>
+			<a href="#unicorn">
+			  <span>Work</span>
+			</a>
+		  </li><li>
+			<a href="#skills">
+			  <span>About</span>
+			</a>
+		  </li><li>
+			<a href="#form">
+			  <span>Say Hello</span>
+			</a>
+		  </li><li>
+			<a href="http://2014.victorlourng.com" target="_blank">
+			  <span>2014 Website</span>
+			</a>
+		  </li>
+		</menu>
+	</nav>
+	<section id="home"> <!-- style="background-image: url(https://poniverse.net/img/ponies/pa_pony.svg); background-position: bottom right 49px; background-repeat: no-repeat; background-size: auto 90%;"> -->
+	  <x-c width="expanded">
+		<x-row>
+		  <x-col size="7">
+			<h1>Hi there,<br>I'm Victor.</h1>
+			<p class="lead">
+			A web developer and multimedia designer<br>passionate about building amazing products.
+			</p>
+			<br>
+			<p><i class="icon-room"></i> Philadelphia &mdash; <i class="icon-domain"></i> Currently looking for a summer internship!</p>
+			<a href="#skills" class="clicky-expo">Latest Work</a>
+		  </x-col>
+		  <x-col size="5">
+			<img src="/vectors/characters/victor-reformed.svg" class="me">
+		  </x-col>
+		</x-row>
+	  </x-c>
+	  <a onclick="$('html, body').animate({ scrollTop: $('#skills').offset().top }, 'slow');" class="next">
+		<span>SCROLL DOWN</span>
+		<i class="icon-down"></i>
+	  </a>
+	</section>
+	<section id="egg"  class="flap flap-right">
+		<x-c>
+		</x-c>
+	</section>
+	<!-- <section id="bat" class="flap flap-right">
+		<x-c>
+			<x-row>
+				<x-col size="6" class="text-left">
+					<p class="lead">West side story</p>
+				</x-col>
+				<x-col size="6">
+					<p class="lead">East site story</p>
+				</x-col>
+			</x-row>
+		</x-c>
+	</section> -->
+	<section id="unicorn" class="flap flap-right">
+		<x-c width="expanded">
+			<h1>Things I've recently worked on:</h1>
+			<br>
+			<br>
+			<x-row>
+				<x-col size="4">
+					<a class="item" target="_blank" href="http://booksmart.it">
+						<div class="img" style="background-image:url(/images/projects/booksmart-app.png);background-position:top;"></div>
+						<div class="caption">
+							<h2>Booksmart</h2>
+							<p>I worked with a Drexel music startup to build an amazing responsive website.</p>
+						</div>
+					</a>
+				</x-col>
+				<x-col size="4">
+					<a class="item" target="_blank" href="http://hsignition.com/">
+						<div class="img" style="background-image:url(/images/projects/ignition-events.png);background-position:center;"></div>
+						<div class="caption">
+							<h2>Ignition</h2>
+							<p>I founded an initative aimed at bringing Computer Science programs to high schoolers across the country.</p>
+						</div>
+					</a>
+				</x-col>
+				<x-col size="4">
+					<a class="item" target="_blank" href="http://iliterobotics.org">
+						<div class="img" style="background-image:url(/images/projects/ilite-web.png);background-size: cover; background-position:top;"></div>
+						<div class="caption">
+							<h2>ILITE Robotics</h2>
+							<p>I built an award winning website for a FIRST robotics team, and engineered an epic frisbee-shooting robot in the process.</p>
+						</div>
+					</a>
+				</x-col>
+			</x-row>
+			<br>
+			<x-row>
+				<x-col size="4">
+					<a class="item" target="_blank" href="https://www.youtube.com/watch?v=VQvbk3YjaEw">
+						<div class="img" style="background-image:url(/images/projects/portableshower-hardware.png);background-position:top;"></div>
+						<div class="caption">
+							<h2>Portable Shower</h2>
+							<p>I collaborated with the University of Maryland to engineer an inflatable utility that can be used in any public restroom.</p>
+						</div>
+					</a>
+				</x-col>
+				<x-col size="4">
+					<a class="item" target="_blank" href="http://hshackers.org">
+						<div class="img" style="background-image:url(/images/projects/hshackers-thumb.png);background-position:top;"></div>
+						<div class="caption">
+							<h2>High School Hackers</h2>
+							<p>An international group of high schoolers passionate about science, technology, engineering, art, and math.</p>
+						</div>
+					</a>
+				</x-col>
+				<x-col size="4">
+					<a class="item" target="_blank" href="http://brainitch.com/ers">
+						<div class="img" style="background-image:url(/images/projects/brainitch-crop.png);background-position:middle;"></div>
+						<div class="caption">
+							<h2>Brainitch</h2>
+							<p>I created a landing page for an estimote-based emergency response system.</p>
+						</div>
+					</a>
+				</x-col>
+			</x-row>
+			<br>
+			<x-row>
+				<x-col size="4">
+					<a class="item" target="_blank" href="http://gestice.org">
+						<div class="img" style="background-image:url(/images/projects/gestice-app.png);background-position:top;"></div>
+						<div class="caption">
+							<h2>Gestice</h2>
+							<p>A new way to unlock your Android phone with the shake of your wrist.</p>
+						</div>
+					</a>
+				</x-col>
+				<x-col size="4">
+					<a class="item" target="_blank" href="http://everfreenw.com">
+						<div class="img" style="background-image:url(/images/projects/everfreenw-spacneedle.png);background-position:bottom right;"></div>
+						<div class="caption">
+							<h2>Everfree Northwest</h2>
+							<p>I developed a digital experience for Seattle's own My Little Pony convention.</p>
+						</div>
+					</a>
+				</x-col>
+				<x-col size="4">
+					<a class="item" target="_blank" href="http://2014.victorlourng.com">
+						<div class="img" style="background-image:url(/images/projects/2014-web.png);"></div>
+						<div class="caption">
+							<h2>2014 Website</h2>
+							<p>For even more projects, check out my really cool website from last year!</p>
+						</div>
+					</a>
+				</x-col>
+			</x-row>
+			<br>
+			<br>
+			<!-- <h1>...that's just the tip of the iceberg.</h1>
+			<a href="#" class="clicky clicky-expo">Explore my entire portfolio</a>
+			<br> -->
+			<!-- <p>
+				<b>I've also done amazing things</b> for Mozilla, SEPTA, <a href="https://phillydevcamp.com/class/summer-2014" target="_blank">Philly Dev Camp</a>, <a href="http://pennappsfellows.com/" target="_blank">PennApps Fellows</a>, Cade, <a href="http://ttdevelopers.github.io" target="_blank">Turntable.fm Developers</a>, HackBCA, Hack the Harbor, DCHacks, Precise Servers, Intuitive Servers, Intuitive Gaming, Eclipse Servers, Seneca Fiber, Connected Metropolis, Poniverse, Hatboro-Horsham Robotics, Fanbase, DeviantArt, Philadelphia Science Invitational, BRMS VEX Robotics, Haymarket Cupcakes, Eddie Samson, JaeLee, and more.
+			</p>-->
+		</x-c>
+	</section>
+	<section id="skills" class="flap flap-left">
+		<x-c>
+			<h1>They call me a web unicorn.</h1>
+			<br>
+			<p class="lead">From brainstorming billiant ideas to  finishing pixel-perfect touches, I can come up with a solution that meets your needs every step of the way.</p>
+			<div id="tabstrip">
+				<x-row>
+					<a onclick="$('#tabstrip').removeClass().addClass('prototype');" class="prototype">
+						<x-col size="3">
+							<div class="animated animated-prototype">
+									<i class="icon-bolt"></i>
+									<div class="brainstorm">
+										<span></span>
+										<span></span>
+										<span></span>
+										<span></span>
+										<span></span>
+										<span></span>
+										<span></span>
+										<span></span>
+									</div>
+							</div>
+							<h2>Prototyping</h2>
+							<p>Every great masterpiece starts with a spark of genius.</p>
+						</x-col>
+					</a>
+					<a onclick="$('#tabstrip').removeClass().addClass('design');" class="design">
+						<x-col size="3">
+							<div class="animated animated-design">
+								<i class="icon-brush"></i>
+								<div class="strokes left">
+									<span></span>
+									<span></span>
+								</div>
+								<div class="strokes right">
+									<span></span>
+									<span></span>
+								</div>
+								<div class="surface"></div>
+							</div>
+							<h2>Design</h2>
+							<p>From identity to style to typography I make it all.</p>
+						</x-col>
+					</a>
+					<a onclick="$('#tabstrip').removeClass().addClass('develop');" class="develop">
+						<x-col size="3">
+							<div class="animated animated-develop">
+								<i class="icon-fork"></i>
+								<div class="left">
+									<i class="icon-left"></i>
+								</div>
+								<div class="right">
+									<i class="icon-right"></i>
+								</div>
+							</div>
+							<h2>Development</h2>
+							<p>I can build anything from web &amp; mobile development to server hosting.</p>
+						</x-col>
+					</a>
+					<a onclick="$('#tabstrip').removeClass().addClass('oss');" class="oss">
+						<x-col size="3">
+							<div class="animated animated-oss">
+								<i class="icon-heart"></i>
+								<i class="icon-github"></i>
+							</div>
+							<h2>Open Source</h2>
+							<p>I specialize in free &amp; open source technologies.</p>
+						</x-col>
+					</a>
+				</x-row>
+			</div>
+		</x-c>
+	</section>
+	<section id="about" classs="flap-left">
+		<x-c>
+			<h1>I'm on a quest for world domination</h1>
+			<p>I'm a well-seasoned and award-winning high school student — a enthusiast passionate about making things awesome. I’ve made it to international robotics competitions, regional science fairs, epic college hackathons, and huge comic conventions. I’ve built and managed startups from ideas, websites from scratch, and art from pure nothingness. I’m on a quest for world domination, one small thing at a time.</p>
+			<x-row>
+				<x-col size="6">
+					<h2>In the News</h2>
+				</x-col>
+				<x-col size="6">
+					<h2>In the News</h2>
+					<a href="http://technical.ly/philly/2015/01/22/big-weekend-high-school-hackers-pennapps-mhacks/" target="_blank">Big weekend for ‘High School Hackers’ at PennApps, MHacks</a>
+					<a href="http://technical.ly/philly/2014/06/24/meet-pennapps-fellows/" target="_blank">Meet the 8 PennApps Fellows interning at Philly startups this summer</a>
+					<a href="http://technical.ly/philly/2014/05/23/high-school-hackers-victor-lourng/" target="_blank">This 15-year-old launched a high school hacker meetup</a>
+				</x-col>
+			</x-row>
+		</x-c>
+	</section>
+	<section class="contact" id="form">
+		<x-c width="expanded">
+		<br>
+			<x-row>
+				<x-col size="8">
+					<h2>Have a <u>Wawa Hoagie</u> on me!</h2>
+					<p>I can meet anywhere in Center City Philadelphia during most weekends.</p>
+				</x-col>
+				<x-col size="4">
+					<a href="#contact" class="clicky clicky-expo">Get in Touch!</a>
+				</x-col>
+			</x-row>
+			<br>
+			<hr>
+			<br>
+			<x-row>
+				<x-col size="6">
+					<x-row>
+						<x-col size="6">
+							<h2>By Email</h2>
+							<p>hello at victorlourng dot com</p>
+						</x-col>
+						<x-col size="6">
+							<h2>By Phone</h2>
+							<p>571 969 1778</p>
+						</x-col>
+					</x-row>
+				</x-col>
+				<x-col size="6">
+					<h2>By Social Media</h2>
+					<a href="http://twitter.com/lablayers" class="" target="_blank">
+					  <i class="icon-twitter"></i>
+					</a>
+					<a href="http://github.com/lablayers" class="" target="_blank">
+					  <i class="icon-github"></i>
+					</a>
+					<a href="http://dribbble.com/lablayers" class="" target="_blank">
+					  <i class="icon-dribbble"></i>
+					</a>
+				</x-col>
+			</x-row>
+			<!--<x-mapbox-gl center="[-75.20464, 39.95306]" zoom="13" hash="true" bearing="9.3" style="/design/maps/ordinary.json"></x-mapbox-gl>-->
+			<x-map>
+				<div id="map" style=""></div>
+			</x-map>
+			<br>
+			<br>
+			<div class="alert">
+				<i class="icon-emo-coffee"></i> &nbsp; More coming soon: This site is an active work in progress. <a href="http://twitter.com/lablayers" target="_blank" class="twitter"><i class="icon-twitter"></i> Follow me on Twitter</a> for updates!
+			</div>
+			<!-- <x-row>
+				<x-col size="6">
+					<h2>Follow me elsewhere!</h2>
+					<h2>
+						<a href="#"><i class="icon-facebook"></i></a>
+						<a href="#"><i class="icon-twitter"></i></a>
+						<a href="#"><i class="icon-github"></i></a>
+						<a href="#"><i class="icon-deviantart"></i></a>
+						<a href="#"><i class="icon-dribbble"></i></a>
+						<a href="#"><i class="icon-arcade"></i></a>
+						<a href="#"><i class="icon-colt-curious"></i></a>
+					</h2>
+				</x-col>
+				<x-col size="6">
+					<h2>Send me an email!</h2>
+					<form action="/">
+						<input type="text"/>
+						<input type="text"/>
+						<input type="text"/>
+						<textarea name="" id="" cols="30" rows="10"></textarea>
+						<button class="clicky">Send</button>
+					</form>
+				</x-col>
+			</x-row> -->
+		</x-c>
+	</section>
+	<footer id="yay">
+		<x-c width="expanded">
+			<div class="left hidden-mobile">
+				<i class="icon-face-unlock"></i>
+			</div>
+			<div class="right">
+				<a href="#" class="clicky clicky-expo">Back to Top</a>
+			</div>
+			<h2>
+				<strong>Victor Lourng</strong>
+				<span class="social">
+					<a href="http://twitter.com/lablayers" class="twitter" target="_blank">
+					  <i class="icon-twitter"></i>
+					</a>
+					<a href="http://github.com/lablayers" class="github" target="_blank">
+					  <i class="icon-github"></i>
+					</a>
+					<a href="http://dribbble.com/lablayers" class="dribbble" target="_blank">
+					  <i class="icon-dribbble"></i>
+					</a>
+				</span>
+			</h2>
+			<p>
+				Crafted with love in Philadelphia.
+				<br>
+				Check out the <a href="https://github.com/lablayers/new-airplane" target="_blank">source on GitHub</a> and my <a href="https://2014.victorlourng.com" target="_blank">2014 website</a>!
+			</p>
+		</x-c>
+	</footer>
+
+	<!-- Javascript magic using jQuery -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<!-- <script src="/scripts/build/production.js"></script> -->
+	<link href="https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.2/mapbox-gl.css" rel="stylesheet"/>
+	<script src="https://api.tiles.mapbox.com/mapbox-gl-js/v0.4.2/mapbox-gl.js"></script>
+	<script type="text/javascript">
+	// TODO: Move all of this map code to a separate file
+	mapboxgl.accessToken = 'pk.eyJ1IjoidmljbG91IiwiYSI6InlGTGg2VWcifQ.JtZv4b1btXB1FqNK_yMUCQ';
+	// Create a map in the div #map
+	var map = new mapboxgl.Map({
+	  container: 'map', // container id
+	  style: '/design/mapbox/ordinary.json', //stylesheet location
+	  center: [39.9525,-75.1707], // starting position
+	  zoom: 13, // starting zoom
+	  hash: false, // update page url with location hash
+	  bearing: 9.3 // people will love me for this detail!
+	});
+	  
+	var geoJSON = {
+	"type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+	"features": [
+	  {
+		"type": "Feature", // HQ
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-75.20464, 39.95306]
+		},
+		"properties": {
+		  "title": "Hideout",
+		  "marker-symbol": "warehouse"
+		}
+	  }, {
+		"type": "Feature", // Chill
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-75.14130, 39.94423]
+		},
+		"properties": {
+		  "title": "SSHP",
+		  "marker-symbol": "harbor"
+		}
+	  }, {
+		"type": "Feature", // Work
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-75.18788, 39.95512]
+		},
+		"properties": {
+		  "title": "Booksmart",
+		  "marker-symbol": "chemist"
+		}
+	  }, {
+		"type": "Feature", // Work
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-75.16263, 39.94935]
+		},
+		"properties": {
+		  "title": "Zivtech",
+		  "marker-symbol": "suitcase"
+		}
+	  }, {
+		"type": "Feature", // Wee
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-122.2963, 47.4450]
+		},
+		"properties": {
+		  "title": "Friend Lives Here",
+		  "marker-symbol": "bakery"
+		}
+	  }, {
+		"type": "Feature", // ILITE
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-77.62990, 38.84524]
+		},
+		"properties": {
+		  "title": "I Sold My Soul Here",
+		  "marker-symbol": "heart"
+		}
+	  }, {
+		"type": "Feature", // Elks
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-75.83390, 39.61574]
+		},
+		"properties": {
+		  "title": "Circle of Life",
+		  "marker-symbol": "embassy"
+		}
+	  }, {
+		"type": "Feature", // MARC
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-75.75263, 39.68519]
+		},
+		"properties": {
+		  "title": "Why hasn't MARC/SEPTA expanded service yet?",
+		  "marker-symbol": "cross"
+		}
+	  }, {
+		"type": "Feature", // Store
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-73.97301, 40.76384]
+		},
+		"properties": {
+		  "title": "A Store to Visit",
+		  "marker-symbol": "shop"
+		}
+	  }, {
+		"type": "Feature", // Vibes
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-73.99855, 40.72947]
+		},
+		"properties": {
+		  "title": "Chiptunes and Co.",
+		  "marker-symbol": "music"
+		}
+	  }, {
+		"type": "Feature", // Food
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-76.63367, 39.25784]
+		},
+		"properties": {
+		  "title": "Great Cookies",
+		  "marker-symbol": "bakery"
+		}
+	  }, {
+		"type": "Feature", // Pokey
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-76.61835, 39.28457]
+		},
+		"properties": {
+		  "title": "Fun! Fun! Fun!",
+		  "marker-symbol": "playground"
+		}
+	  }, {
+		"type": "Feature", // Yum
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-77.04331, 38.90967]
+		},
+		"properties": {
+		  "title": "Circle of Startups",
+		  "marker-symbol": "scooter"
+		}
+	  }, {
+		"type": "Feature", // Yum
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-77.22125, 38.91792]
+		},
+		"properties": {
+		  "title": "Best Mall",
+		  "marker-symbol": "land-use"
+		}
+	  }, {
+		"type": "Feature", // ?
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-77.73549, 38.96898]
+		},
+		"properties": {
+		  "title": "Worlds Collide Here",
+		  "marker-symbol": "museum"
+		}
+	  }, {
+		"type": "Feature", // Plaza
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-77.43136, 38.89876]
+		},
+		"properties": {
+		  "title": "International Love",
+		  "marker-symbol": "farm"
+		}
+	  }, {
+		"type": "Feature", // City that is not Atlantic
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-74.57098, 39.27468]
+		},
+		"properties": {
+		  "title": "Plunging Spot",
+		  "marker-symbol": "swimming"
+		}
+	  }, {
+		"type": "Feature", // City that is not Atlantic
+		"geometry": {
+		  "type": "Point",
+		  "coordinates": [-75.14343, 39.94951]
+		},
+		"properties": {
+		  "title": "Ice Cream",
+		  "marker-symbol": "fast-food"
+		}
+	  }
+	]};
+	var markers = new mapboxgl.GeoJSONSource({ data: geoJSON });
+	map.addSource('markers', markers);
+
+	var geoJSONMFL = {
+	  "type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+	  "features": [
+		{
+		  "type": "Feature",
+		  "properties": {},
+		  "geometry": {
+			"type": "LineString",
+			"coordinates": [
+			  [-75.25935173034668, 39.96185925653245],
+			  [-75.2468204498291, 39.96271448002115],
+			  [-75.14382362365723, 39.949819206129945],
+			  [-75.13240814208984, 39.986590631428506],
+			  [-75.08962154388428, 40.009603815001704],
+			  [-75.07730484008789, 40.02373663935909]
+			]
+		  }
+		}
+	  ]
+	};
+	var routemfl = new mapboxgl.GeoJSONSource({ data: geoJSONMFL });
+	map.addSource('routemfl', routemfl);
+
+	var geoJSONBSL = {
+	  "type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+	  "features": [
+		{
+		  "type": "Feature",
+		  "properties": {},
+		  "geometry": {
+			"type": "LineString",
+			"coordinates": [
+			  [-75.14433860778809, 40.04121785026443],
+			  [-75.17377853393555, 39.90578590324711]
+			]
+		  }
+		}
+	  ]
+	};
+	var routebsl = new mapboxgl.GeoJSONSource({ data: geoJSONBSL });
+	map.addSource('routebsl', routebsl);
+
+	var geoJSONTrolley = {
+	  "type": "FeatureCollection", // By looking at the lines ahead, you are cheating. But there is nothing I can do to stop you...
+	  "features": [
+		{
+		  "type": "Feature",
+		  "properties": {},
+		  "geometry": {
+			"type": "LineString",
+			"coordinates": [
+			  [-75.24664878845215,39.94356807095909],
+			  [-75.2404260635376,39.945969890463914],
+			  [-75.23175716400146,39.94787812530285],
+			  [-75.22489070892334,39.94774652460901],
+			  [-75.20841121673584,39.949819206129945],
+			  [-75.19952774047852,39.95021399548981],
+			  [-75.18970012664795,39.95406307233881],
+			  [-75.1834774017334,39.95488549657055]
+			]
+		  }
+		}
+	  ]
+	};
+	var routetrolley = new mapboxgl.GeoJSONSource({ data: geoJSONTrolley });
+	map.addSource('routetrolley', routetrolley);
+
+	// map.attributionControl.addAttribution('<a href="https://foursquare.com/">Places data from Foursquare</a>');
+	// Add zoom and rotation controls to the map.
+	map.addControl(new mapboxgl.Navigation());
+	// Smooth scrolling across inline links
+	$( document ).ready(function() {
+		$("a").click(function() {
+			$("html, body").animate({
+				scrollTop: $($(this).attr("href")).offset().top
+			}, 500);
+			return false;
+		});
+	});
+	</script>
+	<!-- <script src="http://localhost:35729/livereload.js"></script> -->
+</body>
+</html>

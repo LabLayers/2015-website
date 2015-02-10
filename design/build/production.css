@@ -1640,6 +1640,9 @@ x-showcase {
 #unicorn:after {
   border-color: transparent transparent white transparent;
 }
+#unicorn h1 {
+  font-size: 64px;
+}
 #unicorn .item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1901,7 +1904,7 @@ x-showcase {
 #unicorn .item:hover .caption *:not(h2) {
   opacity: 1;
 }
-#unicorn .item:focus {
+#unicorn .item:active {
   outline: 2px solid black;
 }
 .flap.flap-left:before,
@@ -1919,11 +1922,11 @@ x-showcase {
   translateZ: 0px;
 }
 .flap:before {
-  border-width: 0 0 100px 100vw;
+  border-width: 0 0 70px 100vw;
   border-color: transparent transparent #223847 transparent;
 }
 .flap:after {
-  border-width: 0 100vw 100px 0;
+  border-width: 0 100vw 70px 0;
   border-color: transparent transparent #223847 transparent;
 }
 #about {
@@ -2073,9 +2076,54 @@ x-showcase {
   color: white;
   text-align: center;
 }
+.contact x-map {
+  margin-bottom: 0;
+}
+.contact a.twitter {
+  background: white;
+  color: #55acee;
+  display: inline-block;
+  padding: 0 10px;
+  vertical-align: middle;
+  line-height: 1.75em;
+}
 #yay {
-  background: #000000;
+  background: #1A1A1A;
   color: white;
+}
+#yay .left i {
+  color: black;
+  font-size: 3.5em;
+  opacity: 0.5;
+  line-height: 1.5em;
+  margin-right: 30px;
+  border-right: 1px solid;
+  padding-right: 30px;
+}
+#yay h2 {
+  margin-bottom: 0;
+}
+#yay .social {
+  margin-left: 4px;
+}
+#yay .social a {
+  opacity: 0.5;
+  border-bottom: none;
+  display: inline-block;
+  padding: 0 4px;
+  font-size: 0.8em;
+}
+#yay .social a:hover {
+  opacity: 1;
+}
+#yay .social a:hover.twitter {
+  color: #55acee;
+}
+#yay .social a:hover.github {
+  color: white;
+}
+#yay .social a:hover.dribbble {
+  color: #ea4c89;
 }
 #more-projects {
   background: #b7023f;
@@ -3549,65 +3597,9 @@ x-card:hover {
   color: #57a8bd;
 }
 #form .clicky {
-  display: block;
-  min-width: 200px;
-  margin: 0px auto;
-  font-size: 1.2em;
-  background-color: #ffd881;
-  color: #000000;
-  box-shadow: 0 5px 0 #ffc034, 0 5px 2px #ffc034;
-  border-bottom: 1px solid #ffffff;
-  overflow: hidden;
-  max-width: 300px;
   margin-right: 0;
   margin-bottom: -1.2em;
   float: right;
-}
-#form .clicky:hover,
-#form .clicky:focus,
-#form .clicky:active,
-#form .clicky.active {
-  background-color: #ffd881;
-  background-color: #fff0ce;
-  border-bottom-color: 1px solid #ffffff;
-  color: #000000;
-  box-shadow: 0 3px 0 #ffc034, 0 3px 2px #ffc034;
-  -webkit-transform: translateY(2px);
-      -ms-transform: translateY(2px);
-          transform: translateY(2px);
-}
-#form .clicky:active,
-#form .clicky.active {
-  box-shadow: 0 1px 0 #ffc034, inset 0 1px 0 #ffc034;
-  -webkit-transform: translateY(4px);
-      -ms-transform: translateY(4px);
-          transform: translateY(4px);
-  border-bottom-color: 1px solid #e79f00;
-}
-#form .clicky:after {
-  position: absolute;
-  content: ' ';
-  height: 20px;
-  width: 20px;
-  background: white;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: transparent;
-  -webkit-transition: all 180ms linear;
-          transition: all 180ms linear;
-  translateZ: 0px;
-  opacity: 0;
-}
-#form .clicky:active:after {
-  -webkit-transform: translate(-50%, -50%) scale(8);
-      -ms-transform: translate(-50%, -50%) scale(8);
-          transform: translate(-50%, -50%) scale(8);
-  background: #ffffff;
-  opacity: 0.65;
 }
 #form .clicky:hover {
   color: black;
@@ -3703,68 +3695,8 @@ footer#bottom {
   padding: 60px;
 }
 footer#bottom .clicky {
-  display: block;
-  min-width: 200px;
-  margin: 0px auto;
-  font-size: 1.2em;
-  background-color: #ffd881;
-  color: #000000;
-  box-shadow: 0 5px 0 #ffc034, 0 5px 2px #ffc034;
-  border-bottom: 1px solid #ffffff;
-  overflow: hidden;
-  max-width: 300px;
   margin-right: 0;
   margin-bottom: -1.2em;
-}
-footer#bottom .clicky:hover,
-footer#bottom .clicky:focus,
-footer#bottom .clicky:active,
-footer#bottom .clicky.active {
-  background-color: #ffd881;
-  background-color: #fff0ce;
-  border-bottom-color: 1px solid #ffffff;
-  color: #000000;
-  box-shadow: 0 3px 0 #ffc034, 0 3px 2px #ffc034;
-  -webkit-transform: translateY(2px);
-      -ms-transform: translateY(2px);
-          transform: translateY(2px);
-}
-footer#bottom .clicky:active,
-footer#bottom .clicky.active {
-  box-shadow: 0 1px 0 #ffc034, inset 0 1px 0 #ffc034;
-  -webkit-transform: translateY(4px);
-      -ms-transform: translateY(4px);
-          transform: translateY(4px);
-  border-bottom-color: 1px solid #e79f00;
-}
-footer#bottom .clicky:after {
-  position: absolute;
-  content: ' ';
-  height: 20px;
-  width: 20px;
-  background: white;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  border-radius: 50%;
-  background: transparent;
-  -webkit-transition: all 180ms linear;
-          transition: all 180ms linear;
-  translateZ: 0px;
-  opacity: 0;
-}
-footer#bottom .clicky:active:after {
-  -webkit-transform: translate(-50%, -50%) scale(8);
-      -ms-transform: translate(-50%, -50%) scale(8);
-          transform: translate(-50%, -50%) scale(8);
-  background: #ffffff;
-  opacity: 0.65;
-}
-footer#bottom .clicky:hover {
-  color: black;
-  background: #ffe8b4;
 }
 footer#bottom .indecisiveness {
   border-bottom: 2px dashed;

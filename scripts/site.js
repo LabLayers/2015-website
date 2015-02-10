@@ -42,7 +42,7 @@ app.controller('pageController', function () {
 
 // Contact Page Controller
 app.controller('contactController', function () {
-	console.log("Contact page activated. Alients?");
+	console.log("Contact page activated. Aliens?");
 	// Page-specific scripts
 	// TODO: Move all of this map code to a separate file
 	mapboxgl.accessToken = 'pk.eyJ1IjoidmljbG91IiwiYSI6InlGTGg2VWcifQ.JtZv4b1btXB1FqNK_yMUCQ';
@@ -66,7 +66,7 @@ app.controller('contactController', function () {
 	      "coordinates": [-75.20464, 39.95306]
 	    },
 	    "properties": {
-	      "title": "Operations HQ",
+	      "title": "Hideout",
 	      "marker-symbol": "warehouse"
 	    }
 	  }, {
