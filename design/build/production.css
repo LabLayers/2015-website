@@ -2079,7 +2079,7 @@ x-showcase {
 .contact x-map {
   margin-bottom: 0;
 }
-.contact a.twitter {
+.alert a.twitter {
   background: white;
   color: #55acee;
   display: inline-block;
